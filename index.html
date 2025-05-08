@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Library</title>
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <nav id="navbar">
+        <div></div>
+        <div></div>
+        <div>Mini Library</div>
+        <ul class="navbar-buttons">
+            <button class="about-button" id="about-button">About</button>
+            <button class="newbook-button" id="newbook-button">Add new book</button>
+
+        </ul>
+    </nav>
+    <dialog id="book-dialog">
+        <form method="dialog" id="book-form">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div>
+                <label for="pages">Number of Pages:</label>
+                <input type="number" id="pages" name="pages" required min="1">
+            </div>
+            <div>
+                <label for="publishing-date">Original Publishing Date</label>
+                <input type="date" name="publishing-date" id="publishing-date" required>
+            </div>
+            <div>
+                <label for="cover-page-link">HyperLink for Cover Page</label>
+                <input type="text" name="cover-page-link" id="cover-page-link" required>
+            </div>
+            <div>
+                <label for="isRead">Read:</label>
+                <input type="checkbox" id="isRead" name="isRead">
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: end; margin-top: 1rem;">
+                <button type="submit">Add Book</button>
+                <button type="button" id="close-dialog">Cancel</button>
+            </div>
+        </form>
+
+    </dialog>
+    <main class="library">
+        <div class="read-books">
+            <h2>Read Books</h2>
+            <div class="read-books-row">
+                <!-- Books will be dynamically added here -->
+                <button class="toggle-read-status">Toggle Read Status</button>
+                <button class="edit-read-books">Edit Read Books</button>
+            </div>
+        </div>
+        <div class="unread-books">
+            <h2>Unread Books</h2>
+            <div class="unread-books-row">
+                <!-- Books will be dynamically added here -->
+                <button class="toggle-read-status">Toggle Read Status</button>
+                <button class="edit-unread-books">Edit Unread Books</button>
+            </div>
+        </div>
+    </main>
 </body>
+<footer>
+    <center>Copyright &copy; 2025 Mini Library. All rights reserved.<br></center>
+
+</footer>
+
 </html>
